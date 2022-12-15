@@ -1,4 +1,4 @@
-# custom-hooks-react-bootcamp
+# React Hooks
 
 - useState: This hook allows a functional component to have state. It returns a pair of values: the current state value and a function that updates it.
 
