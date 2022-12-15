@@ -1,16 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useFetch } from "../../hooks/useFetch";
 
 export const APIFetch = () => {
-  const [fetchedData, setFetchedData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/todos").then((response) => {
-      setFetchedData(response.data);
-      setIsLoading(false);
-    });
-  }, []);
+  const [fetchedData, isLoading, error] = useFetch(
+    "https://jsonplaceholder.typicode.com/todos",
+    { method: "GET" }
+  );
 
   return (
     <div>
@@ -21,6 +15,8 @@ export const APIFetch = () => {
             return <div key={index}>{todo.title}</div>;
           })
         : null}
+      <br />
+      {error && <div>Hey there's an error </div>}
     </div>
   );
 };

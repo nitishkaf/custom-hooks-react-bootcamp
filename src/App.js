@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Counter, APIFetch, Form } from "./components";
+import { UserDetail } from "./components/APIFetch/userDetails";
 
 function App() {
   return (
@@ -8,7 +10,8 @@ function App() {
     >
       <Counter />
       <APIFetch />
-      <Form />
+      {/* <Form />  */}
+      {/* <UserDetail /> */}
     </div>
   );
 }
