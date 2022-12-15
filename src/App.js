@@ -8,9 +8,9 @@ function App() {
       className="App"
       style={{ display: "flex", flexDirection: "column", gap: "200px" }}
     >
-      <Counter />
-      <APIFetch />
-      {/* <Form />  */}
+      {/* <Counter /> */}
+      {/* <APIFetch /> */}
+      <Form />
       {/* <UserDetail /> */}
     </div>
   );
